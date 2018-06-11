@@ -1,3 +1,4 @@
+var n = process.argv[1];
 var sq5 = Math.sqrt(5);
 var a = (1 + sq5) / 2;
 var b = (1 - sq5) / 2;

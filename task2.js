@@ -1,6 +1,27 @@
-var n = process.argv[2];
-var sq5 = Math.sqrt(5);
-var a = (1 + sq5) / 2;
-var b = (1 - sq5) / 2;
-var result = (Math.pow(a, n) - Math.pow(b, n)) / sq5;
-process.stdout.write(result);
+function fibonachi(n) {
+    var a = 1;
+    var b = 1;
+    var flag = false;
+    if (n < 0){
+        n *= -1;
+        flag = true;
+    }
+    for (var i = 3; i <= n; i++) {
+        var c = a + b;
+        a = b;
+        b = c;
+    }
+
+    if (flag) {
+        if (n % 2 == 0) {
+            return -b;
+        }
+    }
+    return b;
+  }
+  
+
+
+var str = process.argv[2];
+var n = parseInt(str);
+process.stdout.write(fibonachi(n) + "");
